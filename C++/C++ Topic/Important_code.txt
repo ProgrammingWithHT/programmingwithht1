@@ -1,0 +1,38 @@
+    ABC rtn(ABC b)
+    {
+        ABC t;
+          t.a = a + b.a ;       //this line work         //((ABC*)this)->ABC::a = a;
+          t.b = b + b.b ;       //this line doesn't work because complier consider that b in a object not consider as variable
+          t.b = ((ABC*)this)->ABC::b + (b.b) ;           //((ABC*)this)->ABC::b = b;    //ABC is class name
+        
+
+        cout << "Sum of a + b.a is : " << t.a << endl;
+        cout << "Sum of b + b.b is : " << t.b << endl;
+    }
+
+
+
+
+
+// when we use line number two header file than we use below these command include"math1.h"
+// g++ -o mian.exe main.cpp calculations.cpp
+// main.exe 
+
+
+//________________________________________________
+// g++ main.cpp -o main1     // write in terminal to compile our program
+// ./main1              //wirte in terminal to run our program
+// 
+// echo $?  //write in terminal to get main() function return value
+
+
+
+
+
+// g++ ht16.cpp -lm   //l=library file and m=include math file
+// ls    //write in terminal to get all folder display
+// g++ -o  ht16.exe ht16.cpp --save-temps
+// .s   //is assembler file
+// .o   //object file
+// .ii  //preprocessor file
+// .exe  //executative file

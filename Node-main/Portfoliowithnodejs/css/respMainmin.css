@@ -1,0 +1,88 @@
+
+/* Vertical css */
+@media only screen and (min-width: 480px) and (max-width: 654px){
+
+    /* Home Section */
+    .secMain {
+        height: 170vh;
+    }
+
+
+    /* Tutorial Section  */
+    .secTut {
+        height: 400vh;
+    }
+
+
+}
+@media only screen and (min-width: 654px) and (max-width: 988px){
+
+    /* Home Section */
+
+    .secMain {
+        height: 130vh;
+    }
+
+
+    /* Tutorial Section  */
+
+    .secTut {
+        height: 300vh;
+    }
+
+
+}
+
+/* Horizontal css */
+
+@media only screen and (min-width: 768px) and (max-width: 770px){
+
+    /* Home Section */
+
+    .secMain {
+        height: 100vh;
+    }
+
+
+    /* Tutorial Section  */
+
+    .secTut {
+        height: 113vh;
+    }
+
+
+}
+@media only screen and (min-width: 540px) and (max-width: 542px){
+
+    /* Home Section */
+
+    .secMain {
+        height: 100vh;
+    }
+
+
+    /* Tutorial Section  */
+
+    .secTut {
+        height: 160vh;
+    }
+
+
+}
+@media only screen and (min-width: 320px) and (max-width: 322px){
+
+    /* Home Section */
+
+    .secMain {
+        height: 119vh;
+    }
+
+
+    /* Tutorial Section  */
+
+    .secTut {
+        height: 226vh;
+    }
+
+
+}

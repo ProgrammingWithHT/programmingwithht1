@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/941f19b9a9.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background: #fde6ee;
+            display: flex;
+            align-items: center;
+        }
+        .row{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .col{
+            flex-basis: 30%;
+        }
+        .col img{
+            width: 100%;
+            position: relative;
+        }
+        .info{
+            width: 90%;
+            padding: 15px 0;
+            box-sizing: border-box;
+            text-align: center;
+            border-radius: 3px;
+            background: #001115;
+            color: #fff;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            /* bottom: -50%; */
+        }
+        .info h2{
+            font-weight: 12px;
+            margin: 6px 0;
+        }
+        .icons .fab{
+            font-size: 20px;
+            padding: 10px 8px;
+            cursor: pointer;
+        }
+        .fa-facebook{
+            color: #5088fb;
+        }
+        .fa-youtube{
+            color: #ff0000;
+        }
+        .fa-instagram{
+            color: #e95950;
+        }
+        .fa-twitter{
+            color: #1da1f2;
+        }
+        .pic{
+            filter: grayscale(100%);  /*make black and white image*/
+        }
+        .icons{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1s;
+        }
+        .col:hover .icons{
+            max-height: 100px;
+        }
+        .layer{
+            width: 24%;
+            position: absolute;
+            top: 210px;
+            border-bottom: 2px solid red;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1s;
+        }
+        .col:hover .layer{
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="1 (4).jpg" alt="" class="pic">
+                <div class="layer">
+                    <img src="1 (4).jpg" alt="">
+                </div>
+                <div class="info">
+                    <h2>Mountains</h2>
+                    <p>MeAs/CEO</p>
+                    <div class="icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <img src="1 (5).jpg" alt="" class="pic">
+                <div class="layer">
+                    <img src="1 (5).jpg" alt="">
+                </div>
+                <div class="info">
+                <h2>River Pakistan</h2>
+                    <p>Founder/Pak</p>
+                    <div class="icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col">
+                <img src="1 (6).jpg" alt="" class="pic">
+                <div class="layer">
+                    <img src="1 (6).jpg" alt="">
+                </div>
+                <div class="info">
+                    <h2>Road Map</h2>
+                    <p>Founder/CEO</p>
+                    <div class="icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class A & Class B Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="class-a">
+            <h2>Class A Form</h2>
+
+            <button id="showAttendance" onclick="showAttendance()">Show Attendance</button>
+
+            <form id="formA">
+
+                <div>
+                    <label>4301</label>
+                    <input type="radio" id="presentA" name="genderA" value="Present">
+                    <label for="maleA">Present</label>
+                    <input type="radio" id="absentA" name="genderA" value="Absent">
+                    <label for="femaleA">Absent</label><br><br>
+                </div>
+
+                <div>
+                    <label>4303</label>
+                    <input type="radio" id="presentB" name="genderB" value="Present">
+                    <label for="maleA">Present</label>
+                    <input type="radio" id="absentB" name="genderB" value="Absent">
+                    <label for="femaleA">Absent</label><br><br>
+                </div>
+
+                <div>
+                    <label>4311</label>
+                    <input type="radio" id="presentC" name="genderC" value="Present">
+                    <label for="maleA">Present</label>
+                    <input type="radio" id="absentC" name="genderC" value="Absent">
+                    <label for="femaleA">Absent</label><br><br>
+                </div>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>

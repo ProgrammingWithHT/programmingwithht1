@@ -1,0 +1,1 @@
+in plain javascript 0 is treated as false value but not in typescript

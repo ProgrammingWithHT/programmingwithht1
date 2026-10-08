@@ -1,0 +1,10 @@
+.div1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.div1 h1 {
+  color: red;
+}

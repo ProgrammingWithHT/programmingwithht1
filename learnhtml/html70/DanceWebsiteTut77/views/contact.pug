@@ -1,0 +1,29 @@
+//- page-a.pug
+extends base.pug
+
+block scripts
+  script(src='/static/index.js')
+
+block style
+  style
+    include ../static/style.css
+    include ../static/styleContact.css
+
+block content
+    form(action="/contact", method="post") 
+        div#box
+            h1 Contact Us 
+            div 
+                input(type="search", name="name" placeholder="Enter your name")
+            div  
+                input(type="search", name="phone" placeholder="Enter your phone number")
+            div 
+                input(type="search", name="email" placeholder="Enter your email id")
+            div  
+                input(type="search", name="address" placeholder="Enter your address")
+            div  
+                input(type="search", name="concern" placeholder="Enter your concern")
+            div  
+                //- input(type="button", value="Submit" id="btn")   this input not work with database so we use below button
+                button(class="btn")
+                    | Submit

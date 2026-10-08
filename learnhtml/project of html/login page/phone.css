@@ -1,0 +1,12 @@
+
+.box{
+    text-align: center;
+    width: 220px;
+}
+.box input[type="text"], .box input[type="password"], .box input[type="submit"]{
+    margin: 20px auto;
+}
+.box input[type="text"]:focus, .box input[type="password"]:focus{
+    width: 150px;
+    transition: 2.2s;
+}

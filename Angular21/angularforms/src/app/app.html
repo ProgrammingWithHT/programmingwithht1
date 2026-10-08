@@ -1,0 +1,67 @@
+{{getData()}}
+
+<h1>Cart Data</h1>
+
+<!-- 🔹 2. Why $any is Used?
+
+👉 Angular templates are strictly typed
+
+Problem:
+
+$event.target
+
+TypeScript sees:
+
+EventTarget
+
+But EventTarget ❌ does NOT have:
+
+value
+valueAsNumber
+🔹 So this causes error ❌
+$event.target.valueAsNumber ❌
+🔹 Solution 1 → $any() (Quick Hack ⚠️)
+$any($event.target).valueAsNumber
+
+👉 $any() means:
+
+“Ignore TypeScript checking — trust me bro 😅 -->
+<!-- <input type="number" placeholder="Enter the price" (input)="maxPrice.set($any($event.target).valueAsNumber)" /> -->
+<input type="number" placeholder="Enter the price" (input)="maxPrice($event)" />
+
+<br>
+
+<table border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Cart ID</th>
+      <th>User ID</th>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Total</th>
+      <th>thumbnail</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (cart of carts(); track $index) {
+    @for (product of filteredProducts(); track $index) {
+    <tr>
+      <td>{{ cart.id }}</td>
+      <td>{{ cart.userId }}</td>
+      <td>{{ product.title }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.quantity }}</td>
+      <td>{{ product.total }}</td>
+      <td>
+        <img [src]="product.thumbnail" width="100" />
+      </td>
+    </tr>
+    }
+    }
+  </tbody>
+</table>
+
+
+<router-outlet />

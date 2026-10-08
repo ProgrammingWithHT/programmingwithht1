@@ -1,0 +1,195 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+    background: url('../public/a2.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0.95;
+}
+  
+.loginBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 600px;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+.signupForm{
+  position: absolute;
+  transform: translate(600px,47px);
+  overflow: hidden;
+}
+
+.loginBox > h1{
+  font-size: 4rem;
+  color: aliceblue;
+  margin: 0 1rem 0 1rem;
+  text-align: center;
+}
+
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45rem;
+  min-height: 50rem;
+  border-radius: 5px;
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.966);
+  margin: 2% auto;
+  padding: 2%;
+}
+.loginForm > h2{
+  font-size: 3.5rem;color: aliceblue;
+  margin-top: 4rem;
+  transform: translate(0px,-45px);
+}
+.loginForm > p {
+  font-size: 1.5rem;color: aliceblue;
+  transform: translate(0px,-40px);
+  text-align: center;
+}
+
+/* inputs css  */
+input[class="f-input"]{
+    width: 28rem;
+    height: 5rem;
+
+    margin-top: 3%;
+    padding: 1.5rem;
+    
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: #5E6472;
+  
+    outline: none;
+    border: none;
+  
+    border-radius: 0px 10px 0px 10px;
+    transition: 0.2s linear;
+    
+}
+.file{
+  width: 28rem;
+  padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: aliceblue;
+}
+
+input[class="f-input"]:hover{
+    transform: translateY(-5px);
+    border-radius: 5px;
+    background-color: rgb(100, 148, 237);
+    color: rgb(255, 255, 255);
+}
+
+/* button css */
+.btn {
+    display: inline-block;
+    color: #252537;
+    width: 28rem;
+    height: 5rem;
+    padding: 0 20px;
+    background: #fff;
+    border-radius: 0px 10px 0px 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+    margin: 7% auto;
+    letter-spacing: 0.05em;
+}
+.btn:hover{
+    transform: translateY(5px);
+    border-radius: 5px;
+    background-color: rgb(100, 148, 237);
+    color: rgb(255, 255, 255);
+}
+
+/* Submits */
+.btnBox{width: 70%;display: flex;}
+.btn1 {width: 40%;}
+
+
+.navBox{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  /* background: rgb(255, 255, 255); */
+  border-radius: 5px;
+  box-shadow: 0 9px 50px hsla(60, 14%, 99%, 0.966);
+
+}
+.imgBox{
+  background: rgb(255, 255, 255);
+  padding: .5rem;
+  border-radius: 50%;
+  margin: .5rem;
+}
+.rightNav{
+  display: flex;
+  flex-wrap: wrap;
+}
+.btnNav{
+  font-size: 2rem;
+  background: #ffffff;
+  border-radius: 10%/50%;
+  outline: none;
+  text-decoration: none;
+  padding: .5rem;margin: .5rem;
+}
+
+.loginForm1{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 70rem;
+  min-height: 50rem;
+  border-radius: 5px;
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.966);
+  margin: 2% auto;
+  padding: 2%;
+}
+.messageText{
+  background:gray;
+  padding:1rem;
+  display:inline-block;
+  margin:.5rem
+}
+
+
+
+
+
+
+/* resposive login page */
+@media only screen and (min-width: 10px) and (max-width:700px){
+    html{
+      font-size: 55%;
+    }
+    .loginBox > h1{
+      font-size: 3rem;
+    }
+    .loginForm{
+      width: 30rem;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      position: relative;
+    }
+    .box {
+      /* content:"hamzajkhlhlhlkjlkkhlk"; */
+  position:absolute;
+  top: 10px;left: 200px;
+  z-index:2;
+  height:80px;
+  background:blue;
+  /* transform-style: preserve-3d; This is important */
+}
+.box > div {
+  margin:0 50px;
+  height:100px;
+  background:red; 
+  position: absolute;
+  z-index:1;
+   /* this will do nothing */
+  /* transform:translateZ(-90px); this will do the magic */
+}
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum porro velit atque reiciendis in voluptate eos explicabo quisquam eveniet ipsa, illum, dolore qui, laudantium voluptas tenetur neque eum nihil libero?</div>
+  </div>
+</body>
+
+</html>

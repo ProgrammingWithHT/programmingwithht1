@@ -1,0 +1,6 @@
+tutorial point text point
+counting token in paragraph 
+python - sorting line
+tagging in word
+
+make assignment of NLP on text related write module also

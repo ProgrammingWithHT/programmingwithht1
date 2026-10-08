@@ -1,0 +1,29 @@
+
+.preNav {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: .1rem solid rgba(0, 0, 0, 0.171);
+    background-color: rgba(0, 0, 0, 0.876);
+}
+.preNav div {
+    display: flex;
+    align-items: center;
+}
+.preNav div a{
+    display: inline-block;
+    color: darkgray;
+    font-size: 1.5rem;
+    margin: .5rem 1rem;
+}
+.preNav div a:hover{
+    color: azure
+}
+.preNav div span{
+    font-size: 1.5rem;
+}
+.preNav div svg {
+    fill: darkgray;
+}
+.preNav div svg:hover {
+    fill: azure;
+}

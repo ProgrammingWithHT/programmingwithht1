@@ -1,0 +1,131 @@
+/* Responsive css */
+@media only screen and (min-width: 0px) and (max-width: 993px){
+
+
+    /* Navigation Bar css */
+
+    .burger {
+        display: block;
+    }
+    .navbar {
+        flex-direction: column;
+        height: 410px;
+        transition: all 0.7s ease-out;
+    }
+    .res-nabar-hei {
+        height: 70px;
+    }
+    .res-nav-elem-vis {
+        visibility: hidden;
+    }
+    .leftNav {
+        flex-direction: column;
+    }
+    .rightNav {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo {
+        margin-left: 30px;
+    }
+    .leftNav li a {
+        margin: 5px;
+    }
+
+
+
+    /* Home Section */
+
+    .secMain {
+        flex-direction: column-reverse;
+    }
+    .leftSec h1 {
+        font-size: 35px;
+        margin: 0px -50px;
+    }
+    .leftSec p {
+        margin: 0px -50px;
+    }
+    .res-sec-btn {
+        margin-left: -50px;
+    }
+
+
+
+    /* Tutorial Section */
+    
+    .secTut {
+        /* height: 170vh ; */
+        /* height: 700px ; */
+        display: flex;
+        flex-direction: column;
+    }
+    .leftTut button {
+        
+    }
+    .logo2T{
+        height: 200px;
+        width: 200px;
+    }
+
+
+
+    /* Complier Section */
+
+    .secCom {
+        flex-direction: column-reverse;
+    }
+    .logo2 {
+        height: 200px;
+    }
+
+
+
+    /* About Section Responsive */
+
+    .aboutSec {
+        /* height: 150vh; */
+        height: 1000px;
+    }
+    .aboutTitlediv {
+        font-size: 15px;
+    }
+    .aboutSecin {
+        /* height: 125vh; */
+        height: 780px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .rightAbout {
+        margin: 70px 0px 60px 0px;
+    }
+    .aboutP {
+        min-width: 200px;
+    }
+
+
+
+    /* Footer  */
+
+    .fooMain {
+        flex-direction: column;
+        /* height: 150vh; */
+        height: 1000px;
+    }
+    .res-foo-main-common {
+        margin-top: -50px;
+        margin-left: 0px;
+    }
+    .fooMainheading{
+        margin-left: 0px;
+        /* font-size: 30px; */
+        font-size: 1.5rem;
+    }
+    .res-navSearch {
+        width: 86%;
+    }
+    .social-icons {
+        width: 42%;
+    }
+
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            color: rgb(44, 42, 42);
+        }
+
+        body {
+            background-color: rgb(220, 228, 245);
+        }
+
+        .box {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            width: 18rem;
+            /* padding: 1rem; */
+            background-color: rgb(255, 255, 255);
+            transition: all linear 200ms;
+            /* overflow:inherit; */
+        }
+
+        /* BOX TOP */
+        .boxt {
+            margin-left: .5rem;
+            background-color: rgb(255, 255, 255);
+            min-height: 15vh;
+            padding: 1rem 0 1rem 1rem;
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+        }
+
+        .logot {
+            background-color: blue;
+            height: 40px;
+            min-width: 40px;
+            border-radius: 13%;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            font-weight: 900;
+        }
+
+        .title {
+            /* padding-left: 15px; */
+            margin-left: 1.5rem;
+            line-height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .titlep1 {
+            font-weight: 700;
+            color: rgb(73, 71, 69);
+        }
+
+        .titlep2 {
+            font-weight: 100;
+            color: rgb(43, 43, 42);
+            font-size: .8rem;
+        }
+
+        .lt {
+            background-color: blue;
+            height: 30px;
+            min-width: 30px;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            font-weight: 900;
+            transform: translate(320%, 0);
+            cursor: pointer;
+
+        }
+
+        .gt {
+            display: none;
+            background-color: blue;
+            height: 20px;
+            min-width: 20px;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+            font-weight: 900;
+            transform: translate(10%, 0);
+            cursor: pointer;
+        }
+
+
+        /* BOX MIDDLE */
+        .boxm {
+            /* background-color: rgb(97, 91, 157); */
+            min-height: 70vh;
+            /* padding: 1rem 1rem 1rem 1rem; */
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .comm {
+
+            /* background-color: green; */
+            height: 50px;
+            margin: 0 1rem 1rem 1rem;
+            line-height: 50px;
+            display: flex;
+        }
+
+        .comm a {
+            margin-left: 2rem;
+        }
+
+        .fa {
+            padding: 1rem;
+            height: 40px;
+            min-width: 40px;
+        }
+
+        .comm:hover {
+            background-color: rgb(220, 228, 245);
+            border-radius: 2%;
+        }
+
+        input[type="text"] {
+            margin-left: 2rem;
+            border: none;
+            background-color: transparent;
+            line-height: 30px;
+            outline: none;
+
+        }
+
+        /* BOX BOTTOM */
+        .boxb {
+            /* background-color: rgb(163, 100, 100); */
+            min-height: 15vh;
+        }
+        :root{
+            --btns : 0.2rem;
+        }
+
+        .btn {
+            z-index: 11;
+            background-color: rgb(130, 129, 129);
+            min-width: 3rem;
+            height: 1.5rem;
+            border-radius: 20% 20% 20% 20% / 50% 50% 50% 50%;
+            position: relative;
+            top: .9rem;
+            left: 5rem;
+            /* left:unset; */
+            /* right: 7.5rem; */
+            /* transform: translate(-12.5rem); */
+        }
+
+        .btn::after {
+            
+            content: "";
+            height: 1.2rem;
+            min-width: 1.2rem;
+            background-color: white;
+            position: absolute;
+            border-radius: 100%;
+            top: .15rem;
+            left: var(--btns);
+            /*1.6*/
+            transition: all linear 200ms;
+            cursor: pointer;
+        }
+
+        .btn:hover::after {
+            /* left: 1.6rem;  */
+        }
+
+        .btn1 {
+            display: none;
+            z-index: 11;
+            background-color: rgb(130, 129, 129);
+            min-width: 3rem;
+            height: 1.5rem;
+            border-radius: 20% 20% 20% 20% / 50% 50% 50% 50%;
+            position: relative;
+            top: .9rem;
+            left: 0.2rem;
+        }
+
+        .btn1::after {
+            content: "";
+            height: 1.2rem;
+            min-width: 1.2rem;
+            /*min-witdth must used with flex display*/
+            background-color: white;
+            position: absolute;
+            border-radius: 100%;
+            top: .15rem;
+            left: 0.2rem;
+            transition: all linear 200ms;
+        }
+
+        .moonh {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box" id="box1">
+
+        <div class="boxt">
+            <div class="logot">CL</div>
+            <div class="gt" id="gt" onclick="myfunction1()">&gt</div>
+            <div class="title">
+                <p class="titlep1">Codinglab</p>
+                <p class="titlep2">Web developer</p>
+            </div>
+            <div class="lt" id="lt" onclick="myfunction2()">&lt</div>
+        </div>
+
+        <div class="boxm">
+            <div class="comm">
+                <i class="fa fa-regular fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="comm">
+                <i class="fa fa-light fa-house"></i>
+                <a href="">Dashboard</a>
+            </div>
+            <div class="comm">
+                <i class="fa fa-sharp fa-solid fa-chart-simple"></i>
+                <a href="">Revenue</a>
+            </div>
+            <div class="comm">
+                <i class="fa fa-light fa-bell"></i>
+                <a href="">Notifications</a>
+            </div>
+            <div class="comm">
+                <i class="fa fa-light fa-timer"></i>
+                <a href="">Analytics</a>
+            </div>
+            <div class="comm">
+                <i class="fa fa-light fa-heart"></i>
+                <a href="">Likes</a>
+            </div>
+            <div class="comm">
+                <i class="fa fa-light fa-wallet"></i>
+                <a href="">Wallets</a>
+            </div>
+        </div>
+        <div class="boxb">
+
+            <div class="comm">
+                <i class="fa fa-light fa-right-from-bracket"></i>
+                <a href="">Wallets</a>
+            </div>
+
+            <div class="comm" id="">
+                <i class="fa fa-light fa-moon" id="moonhidden"></i>
+                <a href="" id="wallets">Wallets</a>
+                <div class="btn" id="btn" onclick="darkmode()"></div>
+                <div class="btn1" id="btn1"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+
+        function darkmode() {
+            let box = document.getElementById('btn');
+            box.style.setProperty('--btns', '1.6rem');
+            document.getElementById('box1').style.background = "black"
+            
+        }
+
+        function myfunction1() {
+            var a = document.getElementById('box1');
+            a.style.width = "18rem";
+            document.getElementById('gt').style.display = "none";
+
+            a.style.overflow = "visible";
+
+            document.getElementById('btn').style.display = 'block';
+            document.getElementById('btn1').style.display = 'none';
+            document.getElementById('moonhidden').style.display = 'block';
+            document.getElementById('wallets').style.display = 'block';
+        }
+
+        function myfunction2() {
+            var a = document.getElementById('box1');
+            a.style.width = "5.4rem";
+            a.style.overflow = 'hidden';
+            // document.getElementById('lt').style.transform = "translate(-320%,0)";
+            document.getElementById('gt').style.display = "block";
+
+
+            document.getElementById('btn').style.display = 'none';
+            document.getElementById('btn1').style.display = 'block';
+            document.getElementById('wallets').style.display = 'none';
+            // b.style.transform = "translate(-12.5rem)";
+
+            document.getElementById('moonhidden').style.display = 'none';
+
+        }
+
+    </script>
+
+</body>
+
+</html>

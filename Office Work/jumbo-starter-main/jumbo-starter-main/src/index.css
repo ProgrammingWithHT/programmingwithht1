@@ -1,0 +1,11 @@
+/* Add this to your Tailwind CSS file if you're using a custom setup */
+@media (max-width: 500px) {
+    .card-wrapper {
+      overflow:auto;
+      scrollbar-width: none;
+    }
+  }
+  
+html {
+    font-size: 14px;
+}

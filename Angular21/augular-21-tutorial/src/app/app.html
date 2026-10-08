@@ -1,0 +1,209 @@
+<div class="container">
+
+    <h1 class="title">Angular Component Communication</h1>
+
+    <!-- <app-header></app-header>
+
+    <div class="card">
+        <app-login [gender]="'Male'" [count]="count"></app-login>
+    </div>
+
+    <div class="card">
+        <app-signup [flag]="'Sign up or not?'" (notify)="handleEvent($event)"></app-signup>
+    </div> -->
+
+    <!-- <div class="card parent">
+        <h2>Parent Component</h2>
+        <h3>NgOnChanges Test</h3>
+
+        <div style="background-color: rgb(89, 213, 6);">{{getChildData}}</div>
+
+        <div class="btn-group">
+            <button (click)="increase()">Increase</button>
+            <button (click)="decrement()">Decrease</button>
+            <button (click)="reset()">Reset</button>
+        </div>
+
+    </div> -->
+
+    <!-- Signal -->
+    <!-- <div style="padding: 20px; border: 1px solid #007bff; max-width: 400px; margin:auto;">
+        <h2>Angular Signal Demo</h2> -->
+
+    <!-- 1️⃣ Counter -->
+    <!-- <div style="margin-bottom: 15px;">
+            <h3>Counter: {{ count1() }}</h3>
+            <h4>Double Count: {{ doubleCount1() }}</h4>
+            <button (click)="increment1()">Increment</button>
+            <button (click)="decrement1()">Decrement</button>
+        </div> -->
+
+
+    <!-- </div> -->
+
+    <!-- Load Api in Angular -->
+    <!-- <div class="card parent">
+        <button (click)="getUsers()">Load Users From Api</button>
+        <h2>User List</h2>
+        <ul>
+            <li *ngFor="let user of users">
+                <b>{{user.name}}</b> - {{user.email}}
+            </li>
+        </ul>
+    </div>
+    <br> -->
+
+    <!-- Event in angular -->
+    <!-- <div class="card parent">
+        <h2>Event In Angular</h2>
+        <button (click)="btneventHandler($event)" value="hamza">Click</button>
+
+        <div (mouseenter)="mousehandleEvent($event)"
+            style="width: 50px; height: 50px; background-color: greenyellow;margin: 10px;padding: 2px;">Enter Mouse
+        </div>
+        <div (mouseleave)="mousehandleEvent($event)"
+            style="width: 50px; height: 50px; background-color: red;margin: 10px; padding: 2px;">Leave Mouse</div>
+
+
+        <input (blur)="keyhandleEvent($event)" (focus)="keyhandleEvent($event)" (input)="keyhandleEvent($event)"
+            placeholder="Enter Username" /> -->
+
+    <!-- #emailField is Template Reference Variable -->
+    <!-- Why It’s Useful
+        Access input values without (input) or $event -->
+    <!-- <input placeholder="enter email" #emailField />
+        <button (click)="getEmail(emailField.value)">Get Email</button>
+
+    </div> -->
+
+
+
+    <!-- Conditions statement in Angular @if used in new version of angular or *ngif used in old way -->
+
+    <!-- @if(display === true){
+    <div>display : {{display}}</div>
+    }@else {
+    <div>display: {{display}}</div>
+    } -->
+
+    <!-- Switch statement -->
+    <!-- @switch (color) {
+    @case ('red') {<h2>Red</h2>}
+    @case ('blue') {<h2>blue</h2>}
+    @default {<h2>Not Found</h2>}
+    } -->
+
+    <!-- For Loop -->
+    <!-- @for (i of arrData; track $index;) {
+    <h3>{{i}}</h3>
+    } -->
+
+    <!-- *ngIf directive in angular, ng-template is required to used if using elseif or else -->
+    <!-- <div *ngIf="display; else elseBlock">Hi, ngIf</div>
+     <ng-template #elseBlock>ng if display: {{display}}</ng-template>   -->
+
+    <!-- *ngSwitch -->
+    <!-- <div *ngSwitch="color">
+        <h2 *ngSwitchCase="'red'" style="background-color: red;">Red1</h2>
+        <h2 *ngSwitchCase="'green'" style="background-color: green;">green</h2>
+        <h2 *ngSwitchCase="'blue'" style="background-color: blue;">blue</h2>
+    </div> -->
+
+
+    <!-- <div class="card">
+        <app-twowaybinding></app-twowaybinding>
+    </div> -->
+
+
+    <!-- Routing In Angular -->
+    <!-- <div class="card">
+        <ul>
+            <li style="display: flex; flex-direction: column;">
+                <a routerLink="/contact">Contact</a>
+                <a routerLink="/about">About</a>
+            </li>
+        </ul>
+     </div> -->
+
+
+    <!-- <h1>Reactive Form</h1> -->
+    <!-- <form>
+        <input type="text" placeholder="enter name" [formControl]="name2">
+        <br><br>
+        <input type="text" placeholder="enter password" [formControl]="pass">
+        <br><br>
+        <button type="button" (click)="displayValue()">Login</button>
+    </form>
+    {{name2.value}}
+    {{pass.value}} -->
+    <!-- <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="enter name" formControlName="name2">
+        <span *ngIf="name2?.hasError('required')">Name is required</span>
+        <span class="error" *ngIf="name2?.invalid && (name2?.dirty || name2?.touched)">Plz Enter username</span>
+        <br><br>
+        <input type="text" placeholder="enter password" formControlName="password">
+        <span *ngIf="password?.hasError('required')">Password is required</span>
+        <span class="error" *ngIf="password?.invalid && (password?.dirty || password?.touched)">Min length password</span>
+        <br><br>
+        <input type="text" placeholder="enter email" formControlName="email">
+        <span *ngIf="email?.hasError('required')">email is required</span>
+        <span class="error" *ngIf="email?.invalid && (email?.dirty || email?.touched)">Max Length email</span>
+        <br><br>
+        <button>Submit</button>
+    </form> -->
+
+    <!-- <h1>Template Driven Form</h1>
+    <form #userForm="ngForm" (ngSubmit)="addDetails(userForm.value)">
+        <input #name3="ngModel" required type="text" placeholder="enter name" name="name3" ngModel>
+        <span class="error" *ngIf="name3.invalid && name3.touched">Name is required</span>
+        <br><br>
+        <input type="password" #password="ngModel" minlength="5" maxlength="10" placeholder="enter password"
+            name="password" ngModel>
+        <span class="error" *ngIf="password.invalid && password.touched">plz enter valid password</span>
+        <br><br>
+        <select #gender="ngModel" required name="gender" ngModel>
+            <option value=""><Select> Gender</Select></option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <span class="error" *ngIf="gender.invalid && gender.touched">plz select gender</span>
+        <br><br>
+        <input type="range" min="0" max="20" name="range" ngModel>
+        <br><br>
+        <button [disabled]="userForm.invalid">Add User</button>
+    </form> -->
+
+
+    <!-- <h1>Pipes in angular</h1> -->
+    <!-- component.html -->
+    <!-- <p>{{ name4 | uppercase }}</p>
+    <p>{{ today4 | date }}</p>
+    <p>{{ price4 | currency }}</p>
+
+    <h1>Custom Pipes</h1>
+    <h2>{{amount | currencyConvertor:12}}</h2> -->
+    <!-- <h2>{{name4 | currencyConvertor}}</h2> -->
+
+    
+    <h1>Life Cycle Method in Angular</h1>
+    <button (click)="updateCounter()">Count: {{counter}}</button>
+    <div *ngIf="counter != 5">
+        <app-lifecycle [counter]="counter" #lifecycle></app-lifecycle>
+    </div>
+
+    <button (click)="getProductData()">Load Product Data</button>
+
+    @for (user of productData; track $index) {
+        <ul>
+            <li>Name: {{user.name}}</li>
+            <li>Branch: {{user.branch}}</li>
+            <li>Price: {{user.price}}</li>
+        </ul>
+    }
+
+    <h1>Route Lazy Loading</h1>
+    <a routerLink="/admin">Go to admin page</a>
+
+    <router-outlet />
+
+</div>

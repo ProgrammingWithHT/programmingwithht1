@@ -1,0 +1,99 @@
+
+
+.box {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(255, 251, 251),rgba(43, 46, 43, 0.651));
+    height: 80vh;
+    width: 80vw;
+    box-shadow: .5rem .5rem .5rem black,-.5rem -.5rem .5rem black;
+    
+}
+
+.container>h1 {
+    font-size: 10rem;
+    font-weight: 900;
+    text-shadow: .1rem .1rem .1rem whitesmoke, -.1rem -.1rem .1rem rgb(248, 248, 248);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    background-color: gray;
+    border: 1px solid;
+    margin: .5rem;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    outline: none;
+    font-size: 3rem;
+    text-align: center;
+    background: linear-gradient( rgb(157 232 255),rgb(10, 202, 250),#1c7ed2);
+    color: black;
+}
+.submit {
+    cursor: pointer;
+}
+.submit[disabled]:hover {
+    cursor: not-allowed;
+}
+::placeholder {
+    color: rgb(0, 0, 0);
+}
+form input:hover {
+    transform: scale(1.01);
+    background-color: ghostwhite;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(rgb(34, 34, 34), rgba(43, 46, 43, 0.651));
+}
+.container > a:hover {
+    transform: scale(1.01);
+    background-color: ghostwhite;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(rgb(34, 34, 34), rgba(43, 46, 43, 0.651));
+}
+.container > a {
+    background-color: gray;
+    background: linear-gradient( rgb(157 232 255),rgb(10, 202, 250),#1c7ed2);
+    border: 1px solid;
+    margin: .5rem;
+    width: 40rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+/* Resoponsive CSS */
+@media only screen and (min-width: 768px) and (max-width: 2812px){
+    html{
+        font-size: 50% !important;
+    }
+    .container h1 {
+        font-size: 8rem;
+    }
+}
+@media only screen and (min-width: 1px) and (max-width: 767px){
+    html{
+        font-size: 30% !important;
+    }
+    .container h1 {
+        font-size: 5rem;
+    }
+}

@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+/* Scroll Bar Css */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+   width: .7vw;
+}
+html::-webkit-scrollbar-thumb {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: rgb(253, 5, 67);
+}
+html::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(3, 3, 184);
+}
+html::-webkit-scrollbar-track {
+    background: rgba(224, 219, 219, 0.979);
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.navBar .leftNav {
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+.navBar .leftNav span {
+    color: rgb(253, 5, 67);
+}
+
+.navBar .rightNav {
+    margin: 1rem;
+    font-size: 2rem;
+    display: flex;
+}
+
+.navBar .rightNav a {
+    margin: 1rem;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+
+.navBar .rightNav a:hover {
+    color: rgb(253, 5, 67);
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+.burger {
+    display: none;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .titleHome {
+    z-index: 0;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+}
+
+.home .titleHome h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    text-shadow: .1rem .1rem .1rem rgba(20, 20, 20, 0.178),-.1rem -.1rem .1rem rgb(2, 2, 2);
+    animation: titleHome .5s 2 1s;
+}
+.home .titleHome h1 span {
+    color: rgb(253, 5, 67);
+}
+
+@keyframes titleHome {
+    from {
+        transform: rotateY(102deg);
+    }
+}
+
+.home .titleHome p {
+    margin-bottom: 1rem;
+    animation: titleHome 2s 2 1s;
+    width: 60%;
+    text-align: start;
+    color: white;
+}
+
+.home .videoMain #video1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    /* opacity: .8; */
+    opacity: 1;
+    object-fit: cover;
+}
+
+.home .video {
+    position: absolute;
+    left: 5rem;
+    height: 15rem;
+    width: 5rem;
+    overflow: hidden;
+}
+
+.home .video .videoCommon {
+    display: inline-block;
+    margin: .7rem 1rem;
+    background-color: rgba(12, 12, 12, 0.493);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border-radius: 10% 0 10% 0%;
+}
+
+.home .video .videoCommon.active {
+    background-color: rgb(253, 5, 67);
+    box-shadow: .1rem .1rem 1rem .1rem rgb(255, 255, 255);
+}
+
+/* Book  */
+
+.book {
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.insideBook {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.titleCommon {
+    text-align: center;
+    padding: 2rem;
+    font-size: 5rem;
+}
+
+.titleCommon span {
+    color: rgb(253, 5, 67);
+    border: 3px solid black;
+    box-shadow: .1rem .1rem .1rem .1rem rgb(5, 5, 5);
+    background: rgb(24, 21, 21);
+}
+
+.box {
+    border: 5px solid rgb(255, 255, 255);
+    margin: 1rem;
+    display: inline-flex;
+    flex-direction: column;
+    box-shadow: .1rem .1rem 1rem darkblue;
+}
+
+.box img:hover {
+    transform: scale(1.1);
+}
+
+.box img {
+    height: 20rem;
+    width: 30rem;
+    padding: 1rem;
+}
+
+.box .content h3 {
+    font-size: 2rem;
+}
+
+.box .content h3 i {
+    color: rgb(253, 5, 67);
+    padding: 1rem;
+}
+
+.box .content p {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.box .content .icon {
+    padding: 0rem 1rem;
+}
+
+.box .content .icon i {
+    color: rgb(253, 5, 67);
+    font-size: 2rem;
+}
+
+.box .content .price {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.box .content a {
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+    background-color: rgb(2, 2, 90);
+}
+
+.box .content a:hover {
+    background: rgba(2, 2, 90, 0.233);
+}
+
+.box .content {
+    width: 30rem;
+}
+
+/* Services */
+
+.insideServices {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.insideServices .boxServices {
+    border: 5px solid rgb(255, 255, 255);
+    margin: 1rem;
+    display: inline-flex;
+    flex-direction: column;
+    width: 30rem;
+    box-shadow: .1rem .1rem 1rem rgb(253, 5, 67);
+    font-size: 1.5rem;
+}
+
+.insideServices .boxServices:hover {
+    transform: scale(1.1);
+    box-shadow: .1rem .1rem 1rem darkblue;
+}
+
+.insideServices .boxServices i {
+    text-align: center;
+    padding: 1rem;
+    font-size: 5rem;
+    color: darkblue;
+}
+
+.insideServices .boxServices i:hover {
+    color: rgb(253, 5, 67);
+}
+
+.insideServices .boxServices h2 {
+    text-align: center;
+    padding: 1rem;
+}
+
+.insideServices .boxServices p {
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Contact Us */
+
+.boxContact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+}
+
+.formContact {
+    margin: 1rem;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+}
+
+.formContact input, textarea, button {
+    outline: none;
+    box-shadow: 0 .1rem .1rem darkblue;
+    font-size: 2rem;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 139, 0.103);
+    margin: .5rem;
+    border-radius: 1rem;
+    background: none;
+}
+
+.formContact input:hover, textarea:hover, button:hover {
+    transform: scale(1.1);
+    box-shadow: .1rem .1rem .5rem darkblue;
+}
+
+.formContact .btnContact {
+    color: rgba(0, 0, 139, 0.568);
+}
+
+::placeholder {
+    color: rgba(0, 0, 139, 0.568);
+}
+
+.imgContact img {
+    height: 50rem;
+}
+
+/* Review */
+
+.insideReview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.boxReview {
+    border: 5px solid rgb(255, 255, 255);
+    margin: 0 3rem 0 3rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: .1rem .1rem .5rem darkblue;
+}
+
+.boxReview:hover {
+    transform: scale(1.1);
+}
+
+.boxReview img {
+    box-shadow: .1rem .1rem 1rem rgba(68, 59, 61, 0.274);
+    border-radius: 1rem;
+    height: 25rem;
+    width: 20rem;
+}
+
+.boxReview img:hover {
+    box-shadow: .1rem .1rem 1rem darkblue;
+}
+
+.boxReview h2 {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.boxReview h2 span {
+    color: rgb(253, 5, 67);
+}
+
+.boxReview p {
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+.boxReview .icon {
+    padding: 1rem;
+}
+
+.boxReview .icon i {
+    color: rgb(253, 5, 67);
+    font-size: 2rem;
+}
+
+/* Footer */
+
+.footer {
+    background-color: rgba(27, 29, 29, 0.877);
+}
+
+.flexFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.flexFooter .boxFooter {
+    width: 30rem;
+    padding: 2rem;
+    font-size: 1rem;
+}
+
+.boxFooter h2 {
+    padding: 1rem;
+    font-size: 2rem;
+    color: rgb(253, 5, 67);
+}
+
+.boxFooter p {
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+.boxFooter a {
+    display: flex;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+.boxFooter a:hover {
+    color: rgb(253, 5, 67);
+}
+
+.bottomFooter h1 {
+    text-align: center;
+    padding: 1rem;
+    border-top: .1rem solid rgb(253, 5, 67);
+    color: rgb(255, 255, 255);
+}
+
+.bottomFooter h1 span {
+    color: rgb(253, 5, 67);
+}
+
+/* Responsive Website in css */
+
+@media only screen and (min-width: 750px) and (max-width: 1000px) {
+    html {
+        font-size: 55%;
+    }
+    .imgContact img {
+        height: 40rem;
+    }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 749px) {
+    html {
+        font-size: 50%;
+    }
+    .home .titleHome h1 {
+        font-size: 3rem;
+        margin-bottom: 0rem;
+    }
+    .home .video {
+        position: relative;
+        left: 1rem;
+        height: 3rem;
+        width: 20rem;
+        overflow: hidden;
+    }
+    .navBar {
+        flex-direction: column;
+        background: #01014a;
+    }
+    .navBar .rightNav {
+        display: none;
+    }
+    .navBar .rightNav a {
+        width: 40vw;
+        font-size: 3rem;
+        background: #dcdedf;
+        padding: 1rem 2rem;
+        color: rgb(32, 29, 29);
+        font-weight: 900;
+        text-align: center;
+        display: block;
+    }
+    .aaa {
+        display: block !important;
+    }
+    .burger {
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        font-size: 3rem;
+        display: block;
+    }
+    .imgContact img {
+        height: 35rem;
+    }
+    .bottomFooter h1 {
+        font-size: 1.2rem;
+    }
+}

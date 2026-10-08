@@ -1,0 +1,21 @@
+  
+// for using when we reload our page in react js then redux value remove automatically so using below approach we can saved our values
+
+useEffect(() => {
+    const handleBeforeUnload = () => {
+      localStorage.setItem('savedState', JSON.stringify(store.getState()));
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem('savedState'));
+    console.log(data?.user?.user)
+    store.dispatch(addUser(data?.user?.user));
+    localStorage.removeItem('savedState')
+  })

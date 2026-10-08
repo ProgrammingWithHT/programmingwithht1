@@ -1,0 +1,17 @@
+# 1 "./calculations.h"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "./calculations.h"
+#pragma 
+# 1 "./calculations.cpp" 1
+
+
+int add(int x, int y){
+    return x+y;
+}
+int sub(int x, int y){
+    return x-y;
+}
+# 3 "./calculations.h" 2
+int add(int x, int y);
+int sub(int x, int y);

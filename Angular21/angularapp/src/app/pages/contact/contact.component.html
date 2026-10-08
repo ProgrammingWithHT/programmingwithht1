@@ -1,0 +1,42 @@
+<div class="contact-container">
+  <h1>Contact Us</h1>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" formControlName="name" placeholder="Your Name">
+      <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors" class="error">
+        <small *ngIf="contactForm.get('name')?.errors?.['required']">Name is required.</small>
+        <small *ngIf="contactForm.get('name')?.errors?.['minlength']">Minimum 3 characters required.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" formControlName="email" placeholder="Your Email">
+      <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors" class="error">
+        <small *ngIf="contactForm.get('email')?.errors?.['required']">Email is required.</small>
+        <small *ngIf="contactForm.get('email')?.errors?.['email']">Invalid email format.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" formControlName="phone" placeholder="Your Phone Number">
+      <div *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.errors" class="error">
+        <small *ngIf="contactForm.get('phone')?.errors?.['required']">Phone is required.</small>
+        <small *ngIf="contactForm.get('phone')?.errors?.['pattern']">Only numbers are allowed.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description" rows="4" placeholder="How can we help you?"></textarea>
+      <div *ngIf="contactForm.get('description')?.touched && contactForm.get('description')?.errors" class="error">
+        <small *ngIf="contactForm.get('description')?.errors?.['required']">Description is required.</small>
+        <small *ngIf="contactForm.get('description')?.errors?.['minlength']">Minimum 10 characters required.</small>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="!contactForm.valid">Send Message</button>
+  </form>
+</div>

@@ -1,0 +1,112 @@
+
+
+.box {
+    display: flex;
+    height: 65rem;
+    align-items: center;
+}
+.game {
+    background: linear-gradient(rgb(255, 251, 251),rgba(43, 46, 43, 0.651));    
+    width: 80%;
+    margin: 0 auto;        
+    box-shadow: .5rem .5rem .5rem black,-.5rem -.5rem .5rem black;
+}
+.game:hover {
+    transform: scale(1.03);
+}
+.line {
+    height: 2rem;
+    border: none;
+    width: 100%;
+    background-color: rgb(217, 217, 219);
+}
+.line1 {
+    display: block;
+    background: linear-gradient( rgb(157 232 255),rgb(10, 202, 250),#1c7ed2);
+    height: 2rem;
+    width: 0%;
+}
+.game > h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    text-shadow: .1rem .1rem .1rem whitesmoke,-.1rem -.1rem .1rem rgb(248, 248, 248);
+    padding: 1rem;
+    /* background-color: ghostwhite;s */
+}
+.choice-container {
+    display: flex;
+    font-size: 3rem;
+    cursor: pointer;
+    
+}
+.choice-container > p {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.choice-prefix {
+    background-color: gray;
+    width: 7rem;
+    text-align: center;
+    border-radius: 5rem;
+    margin-left: 1rem;
+    /* background-color: ghostwhite; */
+}
+.choice-prefix:hover {
+    transform: scale(1.1);
+    
+}
+.choice-text {
+    background-color: gray;
+    border: 1px solid;
+    margin-left: 1rem;;
+    margin-right: 1rem;;
+    width: 100%;
+    border-radius: 1rem;
+}
+.choiceHover:hover {
+    transform: scale(1.01);
+    background: ghostwhite !important;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: greenyellow;
+}
+.result {
+    display: flex;
+    justify-content: space-around;
+    font-size: 4rem;
+}
+.common {
+    display: flex;
+    justify-content: space-around;
+    font-size: 4rem;
+    font-weight: 900;
+    padding: 1rem;
+}
+.common > p > span {
+    color: red;
+}
+.result > p {
+    font-weight: 900;
+    text-shadow: .1rem .1rem .1rem whitesmoke, -.1rem -.1rem .1rem rgb(248, 248, 248);
+    padding: 1rem;
+}
+
+/* Resoponsive CSS */
+@media only screen and (min-width: 451px) and (max-width: 750px){
+    html {
+        font-size: 50% !important;
+    }
+} 
+@media only screen and (min-width: 1px) and (max-width: 450px){
+    html{
+        font-size: 40% !important;
+    }
+    .box {
+        height: 100rem;
+    }
+}

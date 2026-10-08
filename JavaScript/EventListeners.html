@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            background-color: whitesmoke;
+        }
+
+        .grandparent {
+            background-color: rgb(255, 51, 0);
+            height: 500px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .parent {
+            background-color: rgb(35, 37, 179);
+            height: 300px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .child {
+            background-color: rgb(208, 255, 0);
+            height: 150px;
+            width: 150px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </div>
+
+    <script>
+
+        const grandparent = document.querySelector('.grandparent');
+        const parent = document.querySelector('.parent');
+        const child = document.querySelector('.child');
+
+        // grandparent.addEventListener('click', (e) => {
+        //     // console.log(e);
+        //     // console.log(e.target);
+        //     console.log("First evenlistener")
+        // })
+
+        // // grandparent.addEventListener('click', (e) => {
+        // //     // console.log(e);
+        // //     // console.log(e.target);
+        // //     console.log("Second evenlistener");
+        // // })
+
+        // parent.addEventListener('click', (e) => {
+        //     // console.log(e);
+        //     console.log(e.target);
+        //     // console.log("parent");
+        // }, {capture: true})    //capture default value is false //capture is defined the order of execution of addeventlistener if more than one addeventlistener is used, bydefault it run according to defined in the code
+
+        // child.addEventListener('click', (e) => {
+        //     // console.log(e);
+        //     // console.log(e.target);
+        //     console.log("child");
+        // })
+
+        // document.addEventListener('click', (e)=> {
+        //     console.log("document")
+        // })
+
+
+
+        grandparent.addEventListener('click', (e) => {
+            console.log("GrandParent Capture");
+        }, { capture: true})
+        grandparent.addEventListener('click', (e) => {
+            console.log("grandparent Bubble")
+        })
+
+        // parent.addEventListener('click', (e) => {
+        //     // e.stopPropagation();
+        //     console.log("parent Capture");
+        // }, {capture: true})    
+        parent.addEventListener('click', (e) => {
+            console.log("parent Bubble")
+
+        }, {once: true})    //once: true do occur this addEventlistener only one time
+
+
+        // // child.addEventListener('click', (e) => {
+        // //     console.log("child Capture");
+        // // }, { capture: true})
+        // child.addEventListener('click', (e) => {
+        //     console.log("child Bubble");
+        // })
+
+
+        // // document.addEventListener('click', (e)=> {
+        // //     console.log("document Capture")
+        // // }, { capture: true})
+        // document.addEventListener('click', (e)=> {
+        //     console.log("document Bubble")
+        // })
+
+
+
+        // grandparent.addEventListener('click', () => {
+        //     console.log("grandparent Bubble")
+        // })
+
+        // // parent.addEventListener('click', printHi)
+        // parent.addEventListener('click', () => {
+        //     console.log("HI");
+        // })
+        // setTimeout(() => {
+        //     parent.removeEventListener("click", ()=> {
+        //         console.log("HI");
+        //     })
+        // }, 2000);
+        
+        // child.addEventListener('click', () => {
+        //     console.log("child Bubble");
+        // })
+
+
+        // // function printHi(){
+        // //     console.log("Hi")
+        // // }
+
+
+
+        // const divs = document.querySelectorAll('div');
+        // divs.forEach(div => {
+        //     div.addEventListener('click', ()=> {
+        //         console.log("hi")
+        //     })
+        // }) //this is not work for dynamically div create so what we do
+
+        // document.addEventListener('click', e => {
+        //     if ( e.target.matches('div')) {
+        //         console.log("hi")
+        //     }
+        // })  //this work with dynamically div create
+
+        // addGlobalEventListener('click', 'div', (e)=> {
+        //     console.log('hi')
+        // })
+
+        // function addGlobalEventListener(type, selector, callback) {
+        //     document.addEventListener(type, e=> {
+        //         if (e.target.matches(selector)) callback(e);
+        //     })
+        // }
+
+        // const newDiv = document.createElement('div');
+        // newDiv.style.width = '500px';
+        // newDiv.style.height = '500px';
+        // newDiv.style.backgroundColor = "purple"
+        // document.body.append(newDiv);
+
+
+    </script>
+
+</body>
+
+</html>

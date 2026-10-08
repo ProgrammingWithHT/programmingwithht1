@@ -1,0 +1,128 @@
+/* *{
+    margin: 0;padding: 0;box-sizing: border-box;font-family: Arial, Helvetica, sans-serif;
+} */
+:root {
+    --clr: #222327;
+}
+html{
+    font-size: 62.5%;
+}
+.nav12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr);
+}
+.navigation {
+    position: fixed;
+    bottom: 1rem;
+    width: 40rem;
+    height: 5rem;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    
+}
+.navigation ul {
+    display: flex;
+    width: 35rem;
+}
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 7rem;
+    height: 7rem;
+}
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    z-index: 1;
+}
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 6.5rem;
+    font-size: 2.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--clr);
+    color: red;
+    color: rgb(0, 153, 255);
+}
+.navigation ul li.active a .icon {
+    transform: translateY(-3.2rem);
+}
+.navigation ul li a .text {
+    position: absolute;
+    color: var(--clr);
+    color: red;
+    color: #0582ff;;
+    font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(2rem);
+}
+.navigation ul li.active a .text {
+    opacity: 1;
+    transform: translateY(1rem);
+}
+.indicator {
+    position: absolute;
+    top: -70%;
+    left: 8.5%;
+    width: 5rem;
+    height: 5rem;
+    background-color: #fffffffd;
+    border-bottom: .5rem solid rgb(255, 0, 0);
+    border-radius: 100rem 100rem 0 0;
+    transition: 0.2s;
+}
+.navigation ul li:nth-child(1).active ~ .indicator {
+    transform: translateX(calc(7rem * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(calc(7rem * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator {
+    transform: translateX(calc(7rem * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(calc(7rem * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator {
+    transform: translateX(calc(7rem * 4));
+}
+
+
+
+
+@media only screen and (min-width: 700px) and (max-width: 1000px){
+    html {
+        font-size: 55%;
+    }
+}
+@media only screen and (min-width: 400px) and (max-width: 700px){
+    html {
+        font-size: 45%;
+    }
+}
+@media only screen and (min-width: 350px) and (max-width: 400px){
+    html {
+        font-size: 45%;
+    }
+}
+@media only screen and (min-width: 10px) and (max-width: 350px){
+    html {
+        font-size: 35%;
+    }
+}

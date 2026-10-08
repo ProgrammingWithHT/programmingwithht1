@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #0d0e0e80;
+}
+/* Navigation Bar */
+#navbar{
+    
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+#navbar::before{
+    content: "";
+    position: absolute;
+    top:0px;
+    left:0px;
+ 
+    height: 100%;
+    width:100%;
+    z-index: -1;
+}
+
+#logo{
+    margin: 10px 4px;
+    font-family: 'Krona One', sans-serif;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+#navbar ul{
+    display: flex;
+}
+
+#navbar ul li{ 
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    border-left: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+    color: white;
+    display: block;
+    padding: 9px 22px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: rgba(255, 255, 255, 0.555);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    width: 100px;
+    font-weight: bolder;
+}
+#sar{
+    float: right;
+    margin: 0px 0px;
+    font-size: x-large;
+    padding: 0px 70px;
+    background: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    outline:none;
+    border-right: 1px solid white;
+    
+}
+#sar:hover{
+    width: -200px;
+    background-color: rgba(2, 2, 2, 0.103);
+    color: black;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    font-weight: bolder;
+}
+::placeholder{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0px 100px;
+}
+
+
+/*               Home Section               */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 715px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('a6.jpg') no-repeat center center/cover;
+    height: 819px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 100.89;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: xx-large;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.btn{
+    margin: 3px;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid white;
+    background: none;
+    color: white;
+    padding: 3px 15px;
+    font-size: x-large;
+}
+.btn a{
+    color: white;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: rgba(255, 255, 255, 0.555);
+    color: black;
+}
+
+/*               About-Us               */
+
+#services{
+    margin: 34px;
+    display: flex;
+    background-color: rgba(14, 14, 14, 0.096);
+}
+#About-Us{
+    background: url('a2.jpg') no-repeat center center/cover;
+    height: 850px;
+}
+
+#services .box{ 
+    padding: 24px;
+    width: 375px;
+    margin: 48px 67px;
+    border-radius: 28px;
+    margin-bottom: 20px;
+}
+
+#services .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+}
+
+/*                 Service Section              */
+
+#service{ 
+    position: relative;
+    background: url(a1.jpg) no-repeat center center/cover;
+    height: 850px;
+}
+
+#service::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients img{
+    height: 124px;
+}
+
+/*                  contact us                 */
+
+.container{
+    margin: 20px 125px;
+}
+#contact{
+    display: flow-root;
+    background: url(a4.jpg) no-repeat center center/cover;
+    height: 835px;
+}
+.form-control {
+    display: block;
+    width: 30%;
+    padding: 1px 10px;
+    font-size: 30px;
+    font-weight: 700;
+    border: 1px solid #ced4da;
+    border-radius: 30px;
+    opacity: 0.5;
+    outline: none;
+}
+.btn.btn-primary {
+    background: #1892f7;
+    border-color: #0d0e0e;
+}
+.btn {
+    padding: 12px 30px 12px 30px ;
+    border-radius: 30px;
+    font-size: 14px;
+}
+.btn-primary {
+    color: #fff;
+}
+

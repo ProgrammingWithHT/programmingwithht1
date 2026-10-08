@@ -1,0 +1,42 @@
+<nav class="navbar">
+  <a routerLink="/home" routerLinkActive="active" class="nav-brand">Enquiry Hub</a>
+
+  <button class="mobile-menu-btn" (click)="toggleMenu()" aria-label="Toggle navigation">
+    @if (isMenuOpen()) {
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+      contenteditable="false" style="width: 24px; height: 24px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+    } @else {
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+      contenteditable="false" style="width: 24px; height: 24px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+    }
+  </button>
+
+  <div class="nav-content" [class.show]="isMenuOpen()">
+    <div class="nav-left">
+      <a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a>
+      <a routerLink="/submit-enquiry" routerLinkActive="active" class="nav-link">Submit Enquiry</a>
+      <a [routerLink]="loggedUser() ? '/enquiry-list' : '/login'" [class.nav-disabled]="!loggedUser()"
+        routerLinkActive="active" class="nav-link">Enquiry List</a>
+      <a [routerLink]="loggedUser() ? '/dashboard' : '/login'" [class.nav-disabled]="!loggedUser()"
+        routerLinkActive="active" class="nav-link">Dashboard</a>
+    </div>
+
+    <div class="nav-right">
+      @if (loggedUser()) {
+      <span class="user-name">Welcome, {{ loggedUser() }}</span>
+      <button class="btn btn-outline" (click)="logout()">Logout</button>
+      } @else {
+      <button routerLink="/login" class="btn btn-secondary">Login</button>
+      }
+    </div>
+  </div>
+</nav>
+
+
+<main class="main-content">
+  <router-outlet />
+</main>

@@ -1,0 +1,36 @@
+Init Temp : -954405757 : 0x12404
+Init ptr : -954405757 : 0x12404 
+First : 10 : 0
+Ptr : 10 : 0
+While Ptr : 10 : 0
+After Temp : 20 : 0
+After Ptr : 10 : 0xfc7fb8       
+Init Temp : 20 : 0
+Init ptr : 20 : 0
+First : 10 : 0xfc7fb8
+Ptr : 10 : 0xfc7fb8
+In While Ptr : 20 : 0
+While Ptr : 20 : 0
+After Temp : 30 : 0
+After Ptr : 20 : 0xfc7fc8
+Init Temp : 30 : 0
+Init ptr : 30 : 0
+First : 10 : 0xfc7fb8
+Ptr : 10 : 0xfc7fb8
+In While Ptr : 20 : 0xfc7fc8
+In While Ptr : 30 : 0
+While Ptr : 30 : 0
+After Temp : 40 : 0
+After Ptr : 30 : 0xfc7fd8
+Init Temp : 40 : 0
+Init ptr : 40 : 0
+First : 10 : 0xfc7fb8
+Ptr : 10 : 0xfc7fb8
+In While Ptr : 20 : 0xfc7fc8
+In While Ptr : 30 : 0xfc7fd8
+In While Ptr : 40 : 0
+While Ptr : 40 : 0
+After Temp : 50 : 0
+After Ptr : 40 : 0xfc7f20
+The list is as follows:
+10 20 30 40 50

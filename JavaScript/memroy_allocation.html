@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Hi</div>
+    <script>
+        class Test{
+            constructor(name){
+                this.name = name
+            }
+        }
+        const globalTest = new Test("globalTest");
+        const globalString = "globalString";
+
+        {
+            //object are automatically grabage cleaner and string is not it still save in memory
+            //non primative data auto grabage clearner and primate data type are not
+            const innerTest = new Test("inner Test");
+            const innerString = "innerString";
+
+            // debugger
+
+            console.log(innerTest.name)
+            console.log(innerString)
+        }
+    </script>
+</body>
+</html>

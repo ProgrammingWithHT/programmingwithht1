@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #circle{
+            /* background-color: red; */
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+            border-radius: 100%;
+            position: absolute;
+            top: 255px;
+            left: 217px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hi</h1>
+    <div id="circle"></div>
+   
+    <script>
+        var count = 1;
+        const circleDiv = document.getElementById('circle');
+        document.addEventListener('click',(e)=>{
+            console.log(e.clientX)
+            if(count ==1){
+                circleDiv.style.top = (e.clientY-15)+"px"
+                circleDiv.style.left = (e.clientX-15)+"px"
+                circleDiv.style.width = "30px"
+                circleDiv.style.height = "30px"
+            }
+            if(count ==2){
+                circleDiv.style.top = (e.clientY-25)+"px"
+                circleDiv.style.left = (e.clientX-25)+"px"
+                circleDiv.style.width = "50px"
+                circleDiv.style.height = "50px"
+            }
+            if(count == 3){
+                circleDiv.style.top = (e.clientY-50)+"px"
+                circleDiv.style.left = (e.clientX-50)+"px"
+                circleDiv.style.width = "100px"
+                circleDiv.style.height = "100px"
+                count = 0;
+            }
+            count++;
+        })
+    </script>
+</body>
+</html>

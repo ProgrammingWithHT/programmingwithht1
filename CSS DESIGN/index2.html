@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;font-family: Arial, Helvetica, sans-serif;transition: all linear 500ms;} 
+        body{background: rgb(75, 75, 227);display: flex;justify-content: center;align-items: center;min-height: 100vh;}
+        .box{
+            background-color: white;
+            height: 90vh;
+            width: 80%;
+            padding: 25px;   
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+        .heading{
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .heading::after{
+            content: "";
+            position: absolute;
+            top: 10;left: 0;
+            height: 2px;width: 30px;
+            background-color: blue;
+            border: 2px solid blue;
+            border-radius: 10% / 50%;
+        }
+        .pdt,.idt{
+            margin-top: 20px;
+        }
+        .pd,.id{
+            /* transform: translateX(1200px); */
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+            margin-top: 10px;
+        }
+        .pd > div ,.id > div{
+            /* background-color: red; */
+            margin: 10px 10px 10px 0;
+            width: 32%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            
+        }
+        .pd > div > input,.id > div > input {
+            padding: 5px;
+            margin: 5px;
+            font-size: medium;
+            line-height: 35px;
+            border-radius: 2% / 20%;
+            border: 0.1rem solid rgb(142, 142, 142);
+            outline: none;
+        }
+        .pd > div > label,.id > div > label {
+            padding: 5px 5px 5px 0;
+            font-size: 15px;
+        }
+        .btn{
+            text-align: center;
+            height: 30px;
+            width: 150px;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 5% / 30%;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .form1{
+            position: absolute;
+            top: 72px;
+            transform: translate(1210px);
+            
+        }
+        .form{
+            /* transform: translate(-1200px); */
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="heading">
+            <h2>Registration</h2>
+        </div>
+        <form action="" class="form" id="form">
+            <div class="pdt">
+                <h3>Personal Details</h3>
+            </div>
+            <div class="pd">
+                <div>
+                    <label for="">Full Name</label>
+                    <input type="text" name="" id="" placeholder="Enter your name">
+                </div>
+                <div>
+                    <label for="">Date of Birth</label>
+                    <input type="date" name="" id="" placeholder="mm/dd/yyyy">
+                </div>
+                <div>
+                    <label for="">Email</label>
+                    <input type="email" name="" id="" placeholder="Enter your email">
+                </div>
+                <div>
+                    <label for="">Mobile Number</label>
+                    <input type="text" name="" id="" placeholder="Enter mobile number">
+                </div>
+                <div>
+                    <label for="">Gender</label>
+                    <input type="text" name="" id="" placeholder="Enter your gender">
+                </div>
+                <div>
+                    <label for="">Occupation</label>
+                    <input type="text" name="" id="" placeholder="Enter your occuption">
+                </div>
+            </div>
+            <div class="idt">
+                <h3>Identity Details</h3>
+            </div>
+            <div class="id">
+                <div>
+                    <label for="">ID Type</label>
+                    <input type="text" placeholder="Enter ID type">
+                </div>
+                <div>
+                    <label for="">ID Number</label>
+                    <input type="text" name="" id="" placeholder="Enter ID number">
+                </div>
+                <div>
+                    <label for="">Issue Authority</label>
+                    <input type="text" name="" id="" placeholder="Enter issue department">
+                </div>
+                <div>
+                    <label for="">Issued State</label>
+                    <input type="text" name="" id="" placeholder="Enter issued state">
+                </div>
+                <div>
+                    <label for="">Issued Date</label>
+                    <input type="text" name="" id="" placeholder="mm/dd/yyyy">
+                </div>
+                <div>
+                    <label for="">Expiry Date</label>
+                    <input type="text" name="" id="" placeholder="mm/dd/yyyy">
+                </div>
+            </div>
+            <button onclick="nextpage()" type="button" class="btn">Next <i class="fa-light fa-arrow-right"></i></button>
+        </form>
+        <form action="" class="form1" id="form1">
+            <div class="pdt">
+                <h3>Address Details</h3>
+            </div>
+            <div class="pd">
+                <div>
+                    <label for="">Full Name</label>
+                    <input type="text" name="" id="" placeholder="Enter your name">
+                </div>
+                <div>
+                    <label for="">Date of Birth</label>
+                    <input type="date" name="" id="" placeholder="mm/dd/yyyy">
+                </div>
+                <div>
+                    <label for="">Email</label>
+                    <input type="email" name="" id="" placeholder="Enter your email">
+                </div>
+                <div>
+                    <label for="">Mobile Number</label>
+                    <input type="text" name="" id="" placeholder="Enter mobile number">
+                </div>
+                <div>
+                    <label for="">Gender</label>
+                    <input type="text" name="" id="" placeholder="Enter your gender">
+                </div>
+                <div>
+                    <label for="">Occupation</label>
+                    <input type="text" name="" id="" placeholder="Enter your occuption">
+                </div>
+            </div>
+            <div class="idt">
+                <h3>Family Details</h3>
+            </div>
+            <div class="id">
+                <div>
+                    <label for="">ID Type</label>
+                    <input type="text" placeholder="Enter ID type">
+                </div>
+                <div>
+                    <label for="">ID Number</label>
+                    <input type="text" name="" id="" placeholder="Enter ID number">
+                </div>
+                <div>
+                    <label for="">Issue Authority</label>
+                    <input type="text" name="" id="" placeholder="Enter issue department">
+                </div>
+                <div>
+                    <label for="">Issued State</label>
+                    <input type="text" name="" id="" placeholder="Enter issued state">
+                </div>
+                <div>
+                    <label for="">Issued Date</label>
+                    <input type="text" name="" id="" placeholder="mm/dd/yyyy">
+                </div>
+                <div>
+                    <label for="">Expiry Date</label>
+                    <input type="text" name="" id="" placeholder="mm/dd/yyyy">
+                </div>
+            </div>
+            <button type="button" class="btn" onclick="prepage()">Back <i class="fa-light fa-arrow-right"></i></button>
+            <button type="submit" class="btn">Submit <i class="fa-light fa-arrow-right"></i></button>
+        </form>
+    </div>
+
+
+    <script>
+        var a = document.getElementById('form');
+        var b = document.getElementById('form1');
+        console.log(a,b)
+
+        function nextpage(){
+
+            a.style.transform = "translate(-1200px,0)";
+            b.style.transform = "translate(0px,0)";
+           
+        }
+        
+        function prepage(){
+            a.style.transform = "translate(0px,0)";
+            b.style.transform = "translate(1210px,0)";
+        }
+
+    </script>
+
+</body>
+
+</html>

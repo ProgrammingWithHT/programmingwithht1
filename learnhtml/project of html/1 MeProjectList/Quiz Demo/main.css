@@ -1,0 +1,65 @@
+
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container h1 {
+    font-size: 7rem;
+    margin: 1rem; 
+    font-weight: 900;
+    text-shadow: .1rem .1rem .1rem whitesmoke
+    ,-.1rem -.1rem .1rem rgb(248, 248, 248);
+}
+.container h1 span {
+    color: red;
+}
+.maina {
+    font-size: 2rem;
+    display: flex;
+    font-weight: 700;
+}
+.maina a{
+    color: black;
+
+    text-decoration: none;
+    background: linear-gradient(
+        rgb(157 232 255),rgb(10, 202, 250),#1c7ed2
+        );
+
+    box-shadow: .1rem .1rem .1rem black
+    ,-.1rem -.1rem .1rem black;
+
+    border: .1rem solid rgb(255, 255, 255);
+    margin: 1rem;
+    padding: 2rem;
+
+    border-radius: 10rem;
+    height: 10rem;
+    width: 10rem;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    
+    
+}
+.maina a:hover {
+    transform: scale(1.1);
+    color: whitesmoke;
+    background: linear-gradient(rgb(34, 34, 34)
+    ,rgba(43, 46, 43, 0.651));
+}
+
+/* Resoponsive CSS */
+@media only screen and (min-width: 100px) and (max-width: 750px){
+    .container h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
+}
+
+

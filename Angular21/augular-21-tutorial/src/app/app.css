@@ -1,0 +1,84 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+}
+
+.container{
+    width: 700px;
+    margin: auto;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card{
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.login-box{
+    border-left: 5px solid #3498db;
+}
+
+.signup-box{
+    border-left: 5px solid #27ae60;
+}
+
+.parent{
+    border-left: 5px solid #e74c3c;
+}
+
+.info{
+    background: #ecf5ff;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.count span{
+    font-weight: bold;
+    color: #e67e22;
+}
+
+.btn-group{
+    margin-top: 10px;
+}
+
+button{
+    padding: 8px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+.send-btn{
+    background: #27ae60;
+    color: white;
+}
+
+button:nth-child(1){
+    background: #3498db;
+    color: white;
+}
+
+button:nth-child(2){
+    background: #e67e22;
+    color: white;
+}
+
+button:nth-child(3){
+    background: #e74c3c;
+    color: white;
+}
+.error{
+    color: red;
+}

@@ -1,0 +1,66 @@
+/* body css */
+body{
+    margin: 0;
+    padding: 0;
+    background: url('2.jpg') no-repeat;
+    background-size: 2480px 900px;
+    background-color: black;
+}
+/* box css */
+.box{
+    width: 736px;
+    border: 2px solid rgb(0, 232, 255);
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 232, 255);
+}
+h1{
+    margin: 20px 25px;
+}
+/* chavge placeholder color */
+::placeholder{
+    color: rgb(255,255,255);
+    opacity: 1;
+}
+/* username and password button css */
+.box input[type="text"], .box input[type="password"]{
+    background: none;
+    display: block;
+    margin: 20px 15px;
+    text-align: center;
+    color: white;
+    border: 2px solid rgb(0, 232, 255);
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    border-radius: 2px;
+    transition: 0.2s;
+}
+
+/* submit button css */
+.box input[type="submit"]{
+    background: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px 70px;
+    text-align: center;
+    color: white;
+    border: 2px solid rgb(0, 232, 255);
+    padding: 14px 10px;
+    width: 100px;
+    outline: none;
+    border-radius: 2px;
+    transition: 0.2s;
+}
+/* focus css */
+.box input[type="text"]:focus, .box input[type="password"]:focus{
+    width: 280px;
+    transition: 2.2s;
+}
+/* move cursor on button */
+box input[type="text"]:hover, .box input[type="password"]:hover, .box input[type="submit"]:hover{
+    background: #242222;
+}

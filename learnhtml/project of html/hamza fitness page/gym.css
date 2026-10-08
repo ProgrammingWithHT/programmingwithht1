@@ -1,0 +1,109 @@
+
+body{
+ font-family: 'Lora', serif;
+    padding: 0px;
+    margin: 0px;
+    background: url('image1.jpg');
+}
+.left{
+  position: absolute;
+     left: 34px;
+     top: 20px;   
+ display: inline-block;
+ /* border: 2px solid red; */
+     line-height: 20px;
+     font-size: 20px;
+ }
+ .left img{
+     width: 100px;
+     margin: 0px 20px;
+     /* filter: invert(100%); can be used to make image black if your image is in white colur  */
+     text-align: center;
+     font-family: 'Lora', serif;
+
+ }
+ .mid{
+     display: block;
+         width: 35%;
+         margin: 20px auto;
+     /* border: 2px solid rgb(12, 255, 24); */
+ 
+ }
+ .right{
+     position: absolute;
+         right: 34px;
+         top: 20px;          /* height: 10px; jf we use height instead of top then they can change the height of border*/
+     display: inline-block;
+     /* border: 2px solid rgb(0, 255, 255); */
+    
+}
+.btn{
+ font-family: 'Lora', serif;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+    outline: none;
+}
+.btn:hover{
+    background-color: rgb(223, 221, 221);
+}
+.navbar{
+    display: inline-block;
+}
+.navbar li{
+    display:inline-block;
+}
+.navbar li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px;
+    font-size: 25px;
+}
+.navbar li a:hover,.navbar .active{
+    color: rgb(88, 88, 88);
+    text-decoration: underline;
+    
+}
+.container{
+    /* border: 2px solid blueviolet; */
+    margin: 106px 70px;
+    padding: 60px;
+    width: 33%;
+    border-radius: 33px;
+}
+.form-group input{
+    /* display: block; */
+    text-align: center;
+    font-family: 'Lora', serif;
+    margin: 5px auto;  /*why auto can't work because we comment the line display: block;*/
+    padding: 10px;
+    background-color: white;
+    border-radius: 100px;
+    border: 1px solid black;
+    outline: none;
+}
+.form-group input[type="text"]:hover{
+    background-color: rgb(252, 216, 216);
+    width: 50%;
+}
+.btnt{
+ font-family: 'Lora', serif;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+    outline: none;
+    width: 100px;
+}
+.btnt:hover{
+    background-color: rgb(252, 216, 216);   
+}
+
+/* ::placeholder{
+    color: rgb(0, 0, 0);
+} */

@@ -1,0 +1,11 @@
+<h2>Counter: {{ count$ | async }}</h2>
+
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">Decrement</button>
+<button (click)="reset()">Reset</button>
+<button (click)="fetchTodo()">Load Random Todo</button>
+
+<div *ngIf="todo$ | async as todo">
+  <h3>Todo:</h3>
+  <pre>{{ todo | json }}</pre>
+</div>

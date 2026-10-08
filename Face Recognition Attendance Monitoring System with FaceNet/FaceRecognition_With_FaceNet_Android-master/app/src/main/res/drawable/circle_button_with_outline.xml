@@ -1,0 +1,19 @@
+<!-- res/drawable/circle_button_with_outline_and_padding.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="#FFFF" />
+            <corners android:radius="50dp" /> <!-- Large enough radius to form a circle -->
+            <padding android:left="10dp" android:top="10dp" android:right="10dp" android:bottom="10dp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#0CC0DF" />
+            <corners android:radius="50dp" />
+            <stroke
+                android:width="2dp"
+            android:color="#000000" />
+        </shape>
+    </item>
+</layer-list>

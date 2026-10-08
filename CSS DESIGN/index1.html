@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            background: rgb(186, 186, 199);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .box{
+            transition: all linear 200ms;
+            /* background-color: green; */
+            display: flex;
+            align-items: center;
+            max-width: 71%;
+            min-height: 460px;
+            overflow: hidden;
+        }
+        #leftarrow{
+            color: white;
+            font-size: 50px;
+            font-weight: 700;
+            margin: 10px;
+            margin: 10px;
+        }
+        #rightarrow{
+            color: white;
+            font-size: 50px;
+            font-weight: 700;
+            margin: 10px;
+            
+        }
+        .bottombtn{
+            position: relative;
+        }
+        .bottombtn1{
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 215px;
+            left: 410px;
+            height: 10px;
+            width: 40px;
+            border-radius: 10% / 50%;
+        }
+        .bottombtn2{
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 215px;
+            left: 460px;
+            height: 10px;
+            width: 40px;
+            border-radius: 10% / 50%;
+        }
+        .bottombtn3{
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 215px;
+            left: 510px;
+            height: 10px;
+            width: 40px;
+            border-radius: 10% / 50%;
+        }
+        .box1{
+            transition: all linear 200ms;
+            /* background-color: rgb(246, 221, 0); */
+            margin: 10px;
+            height: 400px;
+            max-width: 300px;
+        }
+        .boxt{
+            border-radius: 10% 10% 0 0 / 20% 20% 0 0;
+            background-color: blue;
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            padding: 15px;
+        }
+        .boxt i{
+            flex-grow: 0.1;
+            color: rgb(186, 189, 191);
+        }
+        .boxt i:hover{
+            color: rgb(255, 255, 255);
+        }
+        .boxb{
+            border-radius: 0 0 10% 10% / 0 0 10% 10%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 60%;
+            padding: 40px;
+            position: relative; /*comment this portion to see diff the diff depent on display flex property center*/
+        }
+        .boxb img{
+            content: "";
+            border-radius: 50%;
+            height: 150px; /*max-height give in image for better responsive design*/
+            width: 150px;
+            position: absolute;
+            top: -120px;
+            border: 3px solid blue;
+            outline: 3px solid rgb(255, 255, 255);
+            outline-offset: -5px;
+        }
+        .title:nth-child(n){
+            line-height: 30px;
+        }
+        .title:nth-child(2){
+            text-align: center;
+        }
+        .star i:nth-child(-n+4){
+            color: red;
+        }
+        .btn{
+            /* background-color: red; */
+            display: flex;
+            min-width: 14rem;
+            justify-content: space-around;
+        }
+        .btn a{
+            background-color: blue;
+            padding: 10px;
+            width: 6rem;
+            text-align: center;
+            border-radius: 20% / 50% ;
+            color: white;
+            text-decoration: none;
+            
+        }
+        .active {
+            background-color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <i id="leftarrow" class="fa-light fa-arrow-left" onclick="dec(-3)"></i>
+        <div class="bottombtn">
+            <div class="bottombtn1 dot" onclick="act(0)" ></div>
+            <div class="bottombtn2 dot" onclick="act(3)" ></div>
+            <div class="bottombtn3 dot" onclick="act(6)" ></div>
+        </div>
+        <div class="box1">
+            <div class="boxt">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="boxb">
+                <img src="./img.jpg" alt="">
+                <div class="title">
+                    <h2>Hamza Tahir</h2>
+                    <h4>Web Designer</h4>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-thin fa-star"></i>
+                </div>
+                <div class="btn">
+                    <a href="">About Me</a>
+                    <a href="">hire Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="boxt">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="boxb">
+                <img src="./img.jpg" alt="">
+                <div class="title">
+                    <h2>Qasim Tahir</h2>
+                    <h4>Web Designer</h4>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-thin fa-star"></i>
+                </div>
+                <div class="btn">
+                    <a href="">About Me</a>
+                    <a href="">hire Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="boxt">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="boxb">
+                <img src="./img.jpg" alt="">
+                <div class="title">
+                    <h2>Bilal Zulfiqar</h2>
+                    <h4>Web Designer</h4>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-thin fa-star"></i>
+                </div>
+                <div class="btn">
+                    <a href="">About Me</a>
+                    <a href="">hire Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="boxt">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="boxb">
+                <img src="./img.jpg" alt="">
+                <div class="title">
+                    <h2>Ali Hussnain</h2>
+                    <h4>Web Designer</h4>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-thin fa-star"></i>
+                </div>
+                <div class="btn">
+                    <a href="">About Me</a>
+                    <a href="">hire Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="boxt">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="boxb">
+                <img src="./img.jpg" alt="">
+                <div class="title">
+                    <h2>Amna Tahir</h2>
+                    <h4>Web Designer</h4>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-thin fa-star"></i>
+                </div>
+                <div class="btn">
+                    <a href="">About Me</a>
+                    <a href="">hire Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="boxt">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="boxb">
+                <img src="./img.jpg" alt="">
+                <div class="title">
+                    <h2>Tahir Sattar</h2>
+                    <h4>Web Designer</h4>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-thin fa-star"></i>
+                </div>
+                <div class="btn">
+                    <a href="">About Me</a>
+                    <a href="">hire Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="boxt">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="boxb">
+                <img src="./img.jpg" alt="">
+                <div class="title">
+                    <h2>Sidra TAhir</h2>
+                    <h4>Web Designer</h4>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-thin fa-star"></i>
+                </div>
+                <div class="btn">
+                    <a href="">About Me</a>
+                    <a href="">hire Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="boxt">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="boxb">
+                <img src="./img.jpg" alt="">
+                <div class="title">
+                    <h2>Nimra Tahir</h2>
+                    <h4>Web Designer</h4>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-thin fa-star"></i>
+                </div>
+                <div class="btn">
+                    <a href="">About Me</a>
+                    <a href="">hire Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="boxt">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="boxb">
+                <img src="./img.jpg" alt="">
+                <div class="title">
+                    <h2>Samra Tahir</h2>
+                    <h4>Web Designer</h4>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-thin fa-star"></i>
+                </div>
+                <div class="btn">
+                    <a href="">About Me</a>
+                    <a href="">hire Me</a>
+                </div>
+            </div>
+        </div>
+        <i id="rightarrow" class="fa-light fa-arrow-right" onclick="inc(3)"></i>
+    </div>
+
+    <script>
+
+        indexN = 0
+        showSlide(indexN);
+
+        function dec(n){showSlide(indexN -=n)}
+        function inc(n){showSlide(indexN +=n)}
+
+        function act(n){showSlide(indexN = n)}
+
+        function showSlide(n){
+            var slides = document.getElementsByClassName('box1');
+            
+            var dot = document.getElementsByClassName('dot');
+            
+            if(n>slides.length-1){indexN=0}
+            if(n<0){indexN=slides.length-1}
+            
+            for(var i=0; i<slides.length; i++){
+                slides[i].style.display = 'none'
+            }
+            for(var i=0; i<dot.length; i++){
+                dot[i].className = dot[i].className.replace(' active', ' ');
+            }
+            for(var i=0; i<3; i++){
+                slides[Math.abs(indexN+i)].style.display = 'block';
+            }
+            if(indexN == 0){
+                dot[0].classList += ' active';
+            }
+            if(indexN == 3){
+                dot[1].classList += ' active';
+            }
+            if(indexN == 6){
+                dot[2].classList += ' active';
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

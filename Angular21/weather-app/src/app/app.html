@@ -1,0 +1,51 @@
+<div class="container">
+
+  <main class="weather-main" [ngClass]="{
+          'warm': (weather()?.main?.temp ?? 0) > 16
+        }">
+
+    <section class="card">
+
+      <!-- Header -->
+      <header class="header-box">
+        <input class="search-box" #cityInput type="search" placeholder="Search city..."
+          (keyup.enter)="getWeatherDetails(cityInput.value)" />
+
+        <button class="btn" (click)="getWeatherDetails(cityInput.value)">
+          Search
+        </button>
+      </header>
+
+      <!-- Location -->
+      <div class="top-info">
+        <p class="location">
+          {{ weather()?.name || 'Search a city' }}
+        </p>
+        <p class="date">{{ currentDate }}</p>
+      </div>
+
+      <!-- Weather -->
+      @if (weather()) {
+      <article class="weather-box">
+
+        <h1 class="temp" style="color: aliceblue;">
+          {{ weather()?.main?.temp | number:'1.0-0' }}°C
+        </h1>
+
+        <p class="condition">
+          {{ weather()?.weather?.[0]?.main }}
+        </p>
+
+
+        <div class="extra-info">
+          <p>💧 Humidity: {{ weather()?.main?.humidity }}%</p>
+          <p>🌬️ Wind: {{ weather()?.wind?.speed }} m/s</p>
+          <p>📊 Pressure: {{ (weather()?.wind?.speed ?? 0) * 3.6 | number:'1.0-0' }} km/h</p>
+        </div>
+
+      </article>
+      }
+
+    </section>
+  </main>
+</div>

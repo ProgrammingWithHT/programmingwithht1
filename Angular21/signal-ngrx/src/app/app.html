@@ -1,0 +1,16 @@
+
+
+<!-- {{store.todos() | json}} -->
+
+<!-- <app-todos-list/> -->
+
+@if (!store.loading()) {
+    <app-todos-list />
+}@else {
+    <div style="display: flex; justify-content: center;align-items: center; height: 100vh;">
+        <mat-spinner />
+    </div>
+}
+
+
+<router-outlet />

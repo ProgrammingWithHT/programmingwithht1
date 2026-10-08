@@ -1,0 +1,122 @@
+<div class="min-h-screen bg-gray-50 py-12 sm:px-6 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-xl">
+    <h2 class="mt-2 mb-8 text-center text-3xl font-extrabold text-gray-900">
+      Submit a New Enquiry
+    </h2>
+
+    <div class="bg-white py-8 px-4 shadow-xl sm:rounded-lg sm:px-10 border border-gray-100">
+      <form [formGroup]="enquiryForm" (ngSubmit)="onSubmit()" class="space-y-6">
+
+        <div class="grid grid-cols-1 gap-y-6 gap-x-6 sm:grid-cols-2">
+
+          <div class="sm:col-span-2">
+            <label for="customerName" class="block text-sm font-semibold text-gray-700">Full Name</label>
+            <div class="mt-1">
+              <input type="text" id="customerName" formControlName="customerName"
+                class="block w-full rounded-md border-0 py-2.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 transition-all"
+                placeholder="John Doe">
+            </div>
+            @if (enquiryForm.get('customerName')?.invalid && enquiryForm.get('customerName')?.touched) {
+            <p class="mt-2 text-sm text-red-600">Name is required.</p>
+            }
+          </div>
+
+          <div>
+            <label for="customerEmail" class="block text-sm font-semibold text-gray-700">Email Address</label>
+            <div class="mt-1">
+              <input type="email" id="customerEmail" formControlName="customerEmail"
+                class="block w-full rounded-md border-0 py-2.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 transition-all"
+                placeholder="john@example.com">
+            </div>
+            @if (enquiryForm.get('customerEmail')?.invalid && enquiryForm.get('customerEmail')?.touched) {
+            <p class="mt-2 text-sm text-red-600">Valid email is required.</p>
+            }
+          </div>
+
+          <div>
+            <label for="customerPhone" class="block text-sm font-semibold text-gray-700">Phone Number</label>
+            <div class="mt-1">
+              <input type="tel" id="customerPhone" formControlName="customerPhone"
+                class="block w-full rounded-md border-0 py-2.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 transition-all"
+                placeholder="+1 (555) 000-0000">
+            </div>
+            @if (enquiryForm.get('customerPhone')?.invalid && enquiryForm.get('customerPhone')?.touched) {
+            <p class="mt-2 text-sm text-red-600">Phone number is required.</p>
+            }
+          </div>
+
+          <div>
+            <label for="enquiryType" class="block text-sm font-semibold text-gray-700">Enquiry Type</label>
+            <div class="mt-1">
+              <input type="text" id="enquiryType" formControlName="enquiryType"
+                class="block w-full rounded-md border-0 py-2.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 transition-all">
+            </div>
+          </div>
+
+          <div>
+            <label for="followUpDate" class="block text-sm font-semibold text-gray-700">Follow-up Date</label>
+            <div class="mt-1">
+              <input type="datetime-local" id="followUpDate" formControlName="followUpDate"
+                class="block w-full rounded-md border-0 py-2.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 transition-all">
+            </div>
+          </div>
+
+          <div>
+            <label for="categoryId" class="block text-sm font-semibold text-gray-700">Category</label>
+            <div class="mt-1">
+              <select id="categoryId" formControlName="categoryId"
+                class="block w-full rounded-md border-0 py-2.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 transition-all">
+                <option value="" disabled selected>Select a category...</option>
+                @for (cat of categories; track cat.categoryId) {
+                <option [value]="cat.categoryId">{{ cat.categoryName }}</option>
+                }
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="statusId" class="block text-sm font-semibold text-gray-700">Status</label>
+            <div class="mt-1">
+              <select id="statusId" formControlName="statusId"
+                class="block w-full rounded-md border-0 py-2.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 transition-all">
+                <option value="" disabled selected>Select a status...</option>
+                @for (status of statuses; track status.statusId) {
+                <option [value]="status.statusId">{{ status.statusName }}</option>
+                }
+              </select>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-semibold text-gray-700">Message</label>
+          <div class="mt-1">
+            <textarea id="message" formControlName="message" rows="4"
+              class="block w-full rounded-md border-0 py-2.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 transition-all"
+              placeholder="How can we help you?"></textarea>
+          </div>
+          @if (enquiryForm.get('message')?.invalid && enquiryForm.get('message')?.touched) {
+          <p class="mt-2 text-sm text-red-600">Message is required.</p>
+          }
+        </div>
+
+        <div>
+          <label for="feedback" class="block text-sm font-semibold text-gray-700">Internal Feedback (Optional)</label>
+          <div class="mt-1">
+            <textarea id="feedback" formControlName="feedback" rows="2"
+              class="block w-full rounded-md border-0 py-2.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 transition-all"
+              placeholder="Internal logs or feedback..."></textarea>
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <button type="submit"
+            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-lg text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-500/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all active:scale-[0.98]">
+            Submit Enquiry
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

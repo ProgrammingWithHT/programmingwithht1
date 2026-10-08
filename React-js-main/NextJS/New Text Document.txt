@@ -1,0 +1,2 @@
+all components in next js is by default is server-side components by writing 'use-client' to make it's client side components
+.env file only work on server-side components

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button Example</title>
+</head>
+<body>
+    <h1>Select Your Favorite Color</h1>
+
+    <div>
+        <p>Red <input type="radio" name="color" value="red" id="colorRed"></p>
+        <p>Blue <input type="radio" name="color" value="blue" id="colorBlue"></p>
+        <p>Green <input type="radio" name="color" value="green" id="colorGreen"></p>
+    </div>
+
+    <h2>Choose Your Preferred Number</h2>
+
+    <div>
+        <p>
+            <h4 style="display: inline;">Number 4301</h4>
+            <input type="radio" name="number1" value="4301" id="presentA"><label for="">Present</label>
+            <input type="radio" name="number1" value="4301" id="absentA"><label for="">Absent</label>
+        </p>
+        <p>
+            <h4 style="display: inline;">Number 4303</h4>
+            <div style="display: inline;">
+                <input type="radio" name="number2" value="4303" id="presentB"><label for="">Present</label>
+                <input type="radio" name="number2" value="4303" id="absentB"><label for="">Absent</label>
+            </div>
+        </p>
+        <p>
+            <h4 style="display: inline;">Number 4311</h4>
+            <div style="display: inline;">
+                <input type="radio" name="number3" value="4311" id="presentC"><label for="">Present</label>
+                <input type="radio" name="number3" value="4311" id="absentC"><label for="">Absent</label>
+            </div>
+        </p>
+        
+    </div>
+
+    <button onclick="submitForm()">Submit</button>
+
+    <script>
+        function submitForm() {
+            alert("Form submitted!");
+        }
+    </script>
+</body>
+</html>
