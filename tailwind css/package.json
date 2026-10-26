@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vite": "^4.3.9"
+    "vite": "^6.4.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
